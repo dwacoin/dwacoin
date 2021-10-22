@@ -17,9 +17,9 @@ else
     JAVA=java
 fi
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        MEM=`awk '/MemTotal/ { printf "%.0fm", $2*6/10000 }' /proc/meminfo`;
+        MEM=`awk '/MemTotal/ { printf "%.0fm", $2*6/10000 }' /proc/meminfo`
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        MEM=`system_profiler SPHardwareDataType | grep "Memory:" | awk '/Memory/ { printf "%.0fm", $2*1000000*6/10000 }'`;
+        MEM=`system_profiler SPHardwareDataType | grep "Memory:" | awk '/Memory/ { printf "%.0fm", $2*1000000*6/10000 }'`
 else
         MEM='1000m'
 fi
