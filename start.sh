@@ -30,6 +30,6 @@ case $OS in
   *) MEM='1000m';;
 esac
 
-nohup ${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -Xmx${MEM} -Xms${MEM} -cp classes:lib/*:conf:addons/classes:addons/lib/* -Ddwa.runtime.mode=desktop dwa.Dwa > /dev/null 2>&1 &
+nohup ${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -Xmx${MEM} -Xms${MEM} -cp classes:lib/*:conf:addons/classes:addons/lib/* -Ddwa.runtime.mode=server dwa.Dwa > /dev/null 2>&1 &
 echo $! > ~/.dwa/dwa.pid
 cd - > /dev/null

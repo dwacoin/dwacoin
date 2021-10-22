@@ -474,7 +474,6 @@ final class BlockImpl implements Block {
                 baseTarget = prevBaseTarget - prevBaseTarget * Constants.BASE_TARGET_GAMMA
                         * (60 - Math.max(blocktimeAverage, Constants.MIN_BLOCKTIME_LIMIT)) / (60*35);
             }
-            Logger.logDebugMessage("::gamma baseTarget : %d , blocktimeAverage %d", baseTarget, blocktimeAverage);
             if (baseTarget < 0 || baseTarget > Constants.MAX_BASE_TARGET_2) {
                 baseTarget = Constants.MAX_BASE_TARGET_2;
             }

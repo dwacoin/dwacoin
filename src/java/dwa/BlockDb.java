@@ -301,7 +301,6 @@ final class BlockDb {
             }
             if(pendingNotification.size()>0){
                 //There is a pending notification, DO SEND
-                Logger.logDebugMessage("..PendingNotification START SENDING");
                 List<String> accountIds = new ArrayList<>(pendingNotification.keySet());
                 notifyTransaction(accountIds,pendingNotification);
             }else{
@@ -314,7 +313,6 @@ final class BlockDb {
 
     static void notifyTransaction(List<String> ids,HashMap<String, ArrayList<Long>> pendingNotification){
         if(ids.size() == 0){
-            Logger.logDebugMessage("..PendingNotification DONE SENDING");
             ids = null;
             pendingNotification = null;
             return;
@@ -324,7 +322,6 @@ final class BlockDb {
         //TODO Process the Account ID, do SOMETHING
         try{
             String urlString = Constants.accountNotificationRecipient.get(accountId).get("url_post");
-            Logger.logDebugMessage("..PendingNotification try sending "+accountId+" "+urlString+" have another "+ids.size());
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
@@ -341,7 +338,6 @@ final class BlockDb {
                 i++;
             }
             jsonInputString+="]}";
-            Logger.logDebugMessage("..PendingNotification jsonPayload "+jsonInputString);
             try(OutputStream os = connection.getOutputStream()) {
                 OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
                 osw.write(jsonInputString);
@@ -359,9 +355,8 @@ final class BlockDb {
                 responseLine = null;
             }
             connection.disconnect();
-            Logger.logDebugMessage("..pendingNotification Sending Done");
         }catch(Exception e){
-            Logger.logDebugMessage("..pendingNotification Exception "+e==null?"":e.toString());
+            Logger.logDebugMessage("PendingNotification Exception "+e==null?"":e.toString());
         }
         notifyTransaction(ids,pendingNotification);
     }

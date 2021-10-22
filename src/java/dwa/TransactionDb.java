@@ -369,12 +369,10 @@ final class TransactionDb {
                         if(sender!=null||recipient!=null){
                             //This Sender OR Recipient is on the list, need to add to result
                             if(sender!=null){
-                                Logger.logDebugMessage("..PendingNotification sender!=null");
                                 ArrayList<Long> ids = notifications.get(""+transaction.getSenderId());
                                 if(ids == null)notifications.put(""+transaction.getSenderId(),new ArrayList<>());
                                 addToList(transaction.getId(),notifications.get(""+transaction.getSenderId()));
                             }else if(recipient!=null){
-                                Logger.logDebugMessage("..PendingNotification recipient!=null");
                                 ArrayList<Long> ids = notifications.get(""+transaction.getRecipientId());
                                 if(ids == null)notifications.put(""+transaction.getRecipientId(),new ArrayList<>());
                                 addToList(transaction.getId(),notifications.get(""+transaction.getRecipientId()));

@@ -267,7 +267,6 @@ public final class Generator implements Comparable<Generator> {
     }
 
     static long getHitTime(BigInteger effectiveBalance, BigInteger hit, Block block) {
-        Logger.logDebugMessage("::Efd ts: "+block.getTimestamp()+", hit: "+hit+", bt: "+BigInteger.valueOf(block.getBaseTarget())+", eb: "+effectiveBalance);
         return block.getTimestamp()
                 + hit.divide(BigInteger.valueOf(block.getBaseTarget()).multiply(effectiveBalance)).longValue();
     }
@@ -343,7 +342,6 @@ public final class Generator implements Comparable<Generator> {
         hitTime = getHitTime(effectiveBalance, hit, lastBlock);
         deadline = Math.max(hitTime - lastBlock.getTimestamp(), 0);
         listeners.notify(this, Event.GENERATION_DEADLINE);
-        Logger.logDebugMessage("::Efe hit : "+hit+", hitTime: "+hitTime+", lastBlock.getTimestamp(): "+lastBlock.getTimestamp()+", deadline: "+deadline);
     }
 
     boolean forge(Block lastBlock, int generationLimit) throws BlockchainProcessor.BlockNotAcceptedException {
@@ -471,7 +469,6 @@ public final class Generator implements Comparable<Generator> {
             BigInteger effectiveBalance = BigInteger.valueOf(effectiveBalanceDWA);
             BigInteger hit = Generator.getHit(publicKey, lastBlock);
             hitTime = Generator.getHitTime(effectiveBalance, hit, lastBlock);
-            Logger.logDebugMessage("::Eff :"+effectiveBalance.toString()+", Hit : "+hit.toString()+", Hit Time : "+hitTime);
         }
 
         @Override
