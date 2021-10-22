@@ -243,7 +243,7 @@ node can still return fake asset exchange recent trades or open orders prices,
 or modified voting system poll options and descriptions.
 
 To force using a remote node for testing APIs, the /test-proxy URL can be used
-instead of /test for the API test page, i.e. http://localhost:7876/test-proxy.
+instead of /test for the API test page, i.e. http://localhost:4876/test-proxy.
 
 A new sendTransaction API has been added, similar to broadcastTransaction but
 without validating the transaction, without re-broadcasting the transaction and
@@ -570,7 +570,7 @@ currently running Funding Monitors is accessible from under the cogwheel menu.
 
 
 Client UI page or modal redirection. By adding page or modal parameters to the
-http://localhost:7876/index.html URL, the client can be redirected to open a
+http://localhost:4876/index.html URL, the client can be redirected to open a
 specific page or modal pop-up, with pre-populated parameter values.
 For usage example, see:
 https://bitbucket.org/JeanLucPicard/dwa/pull-requests/42/added-page-redirect-modal-popup-with
@@ -1987,7 +1987,7 @@ model is "By Hash".
 
 Enhanced the /test page to accept and pre-fill the test forms with any parameter
 values supplied in the url, e.g.:
-http://localhost:7876/test?requestType=getBlocks&lastIndex=10
+http://localhost:4876/test?requestType=getBlocks&lastIndex=10
 &includeTransactions=true
 
 
@@ -3236,7 +3236,7 @@ if inStockOnly=false, as delisted goods are considered not to be in stock.
 UI bugfixes and improvements. Added themes settings and a corporate theme.
 Hide fee input when sending DWA in basic mode, and set to the minimum fee.
 
-Improved the http://localhost:7876/test page interface, allow custom API call
+Improved the http://localhost:4876/test page interface, allow custom API call
 selection, syntax highlighting of the response JSON.
 
 Added getAccountAssets API request, returning account asset balances for the
@@ -3491,7 +3491,7 @@ re-validate blocks and transactions during the rescan.
 DbShellServlet:
 
 A command line access to the H2 database at runtime is now possible at:
-http://localhost:7876/dbshell
+http://localhost:4876/dbshell
 This page uses the H2 shell tool to allow querying the database at runtime,
 directly from the browser, without having to enable auto server mode in the jdbc
 url. This servlet is only enabled if dwa.enableDebugAPI=true, and is very unwise
@@ -3499,7 +3499,7 @@ to enable on a publicly accessible node as it allows full read and write access
 to the database.
 
 
-The usability of the http://localhost:7876/test API access page has been further
+The usability of the http://localhost:4876/test API access page has been further
 improved.
 
 
@@ -3825,7 +3825,7 @@ GetDGSGoods request now always skips delisted goods.
 
 Improved handling of IPv6 addresses.
 
-Improved the http://localhost:7876/test interface by adding support for tagging
+Improved the http://localhost:4876/test interface by adding support for tagging
 of API requests in multiple categories. All http API requests are now classified
 under separate tabs for easier navigation.
 
@@ -4241,7 +4241,7 @@ Show (unconfirmed) transaction immediately on dashboard after form submit.
 dwa-client-1.0.0:
 
 The old NRS UI is now disabled by default. Only the new UI is available, at
-http://localhost:7876
+http://localhost:4876
 
 Added Account lease events, Listeners can be registered for LEASE_SCHEDULED,
 LEASE_STARTED and LEASE_ENDED. This is of interest to Java API users only.
@@ -4270,7 +4270,7 @@ the unconfirmed balance of the account when the transaction is accepted into the
 unconfirmed pool, and is refunded back when the transaction is either confirmed,
 or expires and is removed from the pool.
 
-Added Wesley's UI under html/ui, available by default on http://localhost:7876
+Added Wesley's UI under html/ui, available by default on http://localhost:4876
 
 
 --------------------------------------------------------------------------------
@@ -4757,11 +4757,11 @@ for use by Java API clients.
 Added an APITestServlet for manual debugging and testing of the
 API. All http API calls will now automatically be listed under:
 
-http://localhost:7876/test
+http://localhost:4876/test
 
 or if you need to try only a specific one, e.g. getBalance:
 
-http://localhost:7876/test?requestType=getBalance
+http://localhost:4876/test?requestType=getBalance
 
 Unlike the admin.html page, this listing is automatically
 generated and will include all available API calls without
@@ -5160,7 +5160,7 @@ public nodes will be used.
 The DoS Filter is enabled for the peer server only.
 
 The API server accepts http/json API requests. By default, now it runs on port
-7876, and listens on the local 127.0.0.1 interface only. If you run a public
+4876, and listens on the local 127.0.0.1 interface only. If you run a public
 node and want to accept API requests from anyone, set dwa.apiServerHost to
 0.0.0.0, and dwa.allowedBotHosts to * (or empty).
 
@@ -5172,7 +5172,7 @@ The Jetty Cross Origin Filter can be enabled for the API server by setting
 dwa.apiServerCORS=true (disabled by default).
 
 The UI server is used for the NRS javascript client UI. By default it runs on
-port 7875 and accepts requests from localhost only. Client developers using
+port 4875 and accepts requests from localhost only. Client developers using
 the same API calls as the NRS client (not the http/json ones) should customize
 dwa.uiResourceBase to point to their client html and javascript files instead.
 
@@ -5588,7 +5588,7 @@ enforced.
 Peers that submit invalid block or transaction data are automatically
 blacklisted.
 
-Java API documentation is now available at http://localhost:7874/doc/ , all APIs
+Java API documentation is now available at http://localhost:4874/doc/ , all APIs
 are subject to change as it is work in progress.
 
 Minor UI changes: added warnings to the unlock account dialog and message.html,
@@ -5830,7 +5830,7 @@ sha256: aa20fb32fe7e6cda7debee59928d5aea8ff7c581c58a56ff68e8252eaf9368c7
 Change log:
 
 Added getGuaranteedBalance API:
-http://localhost:7874/dwa?requestType=getGuaranteedBalance&account=account
+http://localhost:4874/dwa?requestType=getGuaranteedBalance&account=account
 &numberOfConfirmations=numberOfConfirmations
 returns the balance of an account only considering transactions with
 confirmation count >= numberOfConfirmations.
@@ -5860,11 +5860,11 @@ Added Arbitrary Messages code, to be enabled at block 40000.
 New API requests added:
 
 getAliasId
-http://localhost:7874/dwa?requestType=getAliasId&alias=alias
+http://localhost:4874/dwa?requestType=getAliasId&alias=alias
 returns the id of the alias given alias name
 
 getAccountBlockIds
-http://localhost:/7874/dwa?requestType=getAccountBlockIds&account=account
+http://localhost:/4874/dwa?requestType=getAccountBlockIds&account=account
 &timestamp=timestamp
 returns the blockIds generated by the account after timestamp
 
@@ -5931,7 +5931,7 @@ sha256: 4c6ee12c5be7b49e0622afe2b64a0735c1355e58760f525f4a7dc4688882b656
 Note the new URL, after this one new releases will be hosted only at
 download.dwacrypto.org instead of info.dwacrypto.org.
 
-Please test the http://localhost:7874/update.html tool to download and verify
+Please test the http://localhost:4874/update.html tool to download and verify
 the package.
 
 This is mostly a bugfix release. Change log:
@@ -5971,7 +5971,7 @@ Added a checkpoint at block 30000 (the start of transparent forging block).
 
 Added wesleyh's update checker:
 https://bitcointalk.org/index.php?topic=345619.msg4294180#msg4294180
-Use https://localhost:7875/update.html to check for updates - this feature
+Use https://localhost:4875/update.html to check for updates - this feature
 may still have bugs, but including it in the package is a good way to get
 people to test it on multiple browsers.
 
@@ -5995,7 +5995,7 @@ sha256: 4e12df42f9f4727fa34eb62483880c0b2b93f45dfff4b4db8fdc293aecb815e9
 
 From the blockchain, the alias for the sha256 sum is NRSbetaversion:
 
-https://localhost:7875/dwa?requestType=getAliasURI&alias=nrsbetaversion
+https://localhost:4875/dwa?requestType=getAliasURI&alias=nrsbetaversion
 
 This is to be considered EXPERIMENTAL release. There are quite a few changes so
 be careful. Stay with the stable 0.4.8 version if you don't want to take
@@ -6031,7 +6031,7 @@ released as 0.4.8 (I make mistakes too), so 0.4.8 got released with the
 switchover still at 30000. So block 30000 it is now, and we are already there.
 
 Minor changes: Added Get Account Aliases, Get Alias URI, and Get Multiple
-Account Balances features to the https://localhost:7875/admin.html page. Added a
+Account Balances features to the https://localhost:4875/admin.html page. Added a
 few more well-known nodes to the default in the web.xml.
 
 There is one serious security issue which is not completely fixed in 0.4.9e. All
