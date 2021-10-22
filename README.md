@@ -74,12 +74,6 @@ in such a way that no trusted third parties are required anymore.
     - USERS-GUIDE.md
     - DEVELOPERS-GUIDE.md
     - OPERATORS-GUIDE.md
-
-  - in the wiki:
-    - dwawiki.org
-
-  - on the forums:
-    - dwaforum.org
     
 ----
 
