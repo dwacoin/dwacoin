@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ -e ~/.dwa/dwa.pid ]; then
     PID=`cat ~/.dwa/dwa.pid`
     ps -p $PID > /dev/null
