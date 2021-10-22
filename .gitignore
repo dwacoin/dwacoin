@@ -4,7 +4,6 @@
 *.bak
 dwa*.jar
 
-logs/*
 dwa_db
 classes
 .idea/*
