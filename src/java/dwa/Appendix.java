@@ -194,7 +194,7 @@ public interface Appendix {
             return new Message(attachmentData);
         }
 
-        private static final Fee MESSAGE_FEE = new Fee.SizeBasedFee(0, Constants.ONE_DWA, 32) {
+        private static final Fee MESSAGE_FEE = new Fee.SizeBasedFee(0,Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR, 32) {
             @Override
             public int getSize(TransactionImpl transaction, Appendix appendage) {
                 return ((Message)appendage).getMessage().length;
@@ -301,7 +301,7 @@ public interface Appendix {
 
         private static final String appendixName = "PrunablePlainMessage";
 
-        private static final Fee PRUNABLE_MESSAGE_FEE = new Fee.SizeBasedFee(Constants.ONE_DWA/10) {
+        private static final Fee PRUNABLE_MESSAGE_FEE = new Fee.SizeBasedFee(Constants.ONE_DWA / 10 * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR) {
             @Override
             public int getSize(TransactionImpl transaction, Appendix appendix) {
                 return appendix.getFullSize();
@@ -472,7 +472,7 @@ public interface Appendix {
 
     abstract class AbstractEncryptedMessage extends AbstractAppendix {
 
-        private static final Fee ENCRYPTED_MESSAGE_FEE = new Fee.SizeBasedFee(Constants.ONE_DWA, Constants.ONE_DWA, 32) {
+        private static final Fee ENCRYPTED_MESSAGE_FEE = new Fee.SizeBasedFee(Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR, Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR, 32) {
             @Override
             public int getSize(TransactionImpl transaction, Appendix appendage) {
                 return ((AbstractEncryptedMessage)appendage).getEncryptedDataLength() - 16;
@@ -591,7 +591,7 @@ public interface Appendix {
 
         private static final String appendixName = "PrunableEncryptedMessage";
 
-        private static final Fee PRUNABLE_ENCRYPTED_DATA_FEE = new Fee.SizeBasedFee(Constants.ONE_DWA/10) {
+        private static final Fee PRUNABLE_ENCRYPTED_DATA_FEE = new Fee.SizeBasedFee(Constants.ONE_DWA /10 * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR) {
             @Override
             public int getSize(TransactionImpl transaction, Appendix appendix) {
                 return appendix.getFullSize();
@@ -1200,14 +1200,14 @@ public interface Appendix {
             long fee = 0;
             Phasing phasing = (Phasing)appendage;
             if (!phasing.params.getVoteWeighting().isBalanceIndependent()) {
-                fee += 20 * Constants.ONE_DWA;
+                fee += 20 * Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR;
             } else {
-                fee += Constants.ONE_DWA;
+                fee += Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR;
             }
             if (phasing.hashedSecret.length > 0) {
-                fee += (1 + (phasing.hashedSecret.length - 1) / 32) * Constants.ONE_DWA;
+                fee += (1 + (phasing.hashedSecret.length - 1) / 32) * Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR;
             }
-            fee += Constants.ONE_DWA * phasing.linkedFullHashes.length;
+            fee += (Constants.ONE_DWA * Constants.BASE_FEE_NOMINATOR / Constants.BASE_FEE_DENOMINATOR) * phasing.linkedFullHashes.length;
             return fee;
         };
 

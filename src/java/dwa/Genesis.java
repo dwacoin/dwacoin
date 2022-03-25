@@ -18,7 +18,7 @@ package dwa;
 
 public final class Genesis {
 
-    public static final long GENESIS_BLOCK_ID = 3601852901353591864L;
+    public static final long GENESIS_BLOCK_ID = -145183321945369120L;
     public static final long CREATOR_ID = 1739068987193023818L;
     public static final byte[] CREATOR_PUBLIC_KEY = {
             18, 89, -20, 33, -45, 26, 48, -119, -115, 124, -47, 96, -97, -128, -39, 102,
@@ -26,30 +26,24 @@ public final class Genesis {
     };
 
     public static final long[] GENESIS_RECIPIENTS = {
-            Long.parseUnsignedLong("15035502555517475618"),    
-            Long.parseUnsignedLong("2624314093293044240"),
-            Long.parseUnsignedLong("12836715814796865978"),
-            Long.parseUnsignedLong("18182564914556605320"),
-            Long.parseUnsignedLong("8902719358739124453"),
-            Long.parseUnsignedLong("3906362928105277476"),
-            Long.parseUnsignedLong("6877733046539938405"),
-            Long.parseUnsignedLong("5655459865557252653"),
-            Long.parseUnsignedLong("3504983456050623434"),
-            Long.parseUnsignedLong("10036778932057351403")
+            Long.parseUnsignedLong("2266340141337004625"),    
+            Long.parseUnsignedLong("14111575398528765398"),
+            Long.parseUnsignedLong("8260112213559965205"),
+            Long.parseUnsignedLong("10409186412129402684"),
+            Long.parseUnsignedLong("10538500317402612238"),
+            Long.parseUnsignedLong("13246487333523724154"),
+            Long.parseUnsignedLong("1307880421906709596")
     };
 
 
     public static final long[] GENESIS_AMOUNTS = {
+            6000000000000L,
             2000000000000L,
-            2000000000000L,
-            2000000000000L,
-            2000000000000L,
-            1000000000000L,
-            300000000000L,
-            250000000000L,
-            200000000000L,
-            150000000000L,
-            100000000000L,
+            400000000000L,
+            400000000000L,
+            400000000000L,
+            400000000000L,
+            400000000000L
     };
 
     public static final byte[][] GENESIS_SIGNATURES = {

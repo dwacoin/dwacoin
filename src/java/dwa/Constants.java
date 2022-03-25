@@ -43,7 +43,9 @@ public final class Constants {
     public static final int BASE_TARGET_GAMMA = 60;
 
     public static final int FEE_NOMINATOR = 1;
-    public static final int FEE_DENOMINATOR = 1;
+    public static final int FEE_DENOMINATOR = 10;
+    public static final int BASE_FEE_NOMINATOR = 1;
+    public static final int BASE_FEE_DENOMINATOR = 10;
 
     public static final int MAX_ROLLBACK = Math.max(Dwa.getIntProperty("dwa.maxRollback"), 60);
     public static final int GUARANTEED_BALANCE_CONFIRMATIONS = isTestnet ? Dwa.getIntProperty("dwa.testnetGuaranteedBalanceConfirmations", 60) : 60;
