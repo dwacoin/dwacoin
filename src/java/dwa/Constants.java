@@ -138,13 +138,13 @@ public final class Constants {
     public static final int MAX_ANNOUNCE = 60;
 
     public static final int ALIAS_SYSTEM_BLOCK = 0;
-    public static final int TRANSPARENT_FORGING_BLOCK = 0;
+    public static final int TRANSPARENT_FORGING_BLOCK = 30;
     public static final int ARBITRARY_MESSAGES_BLOCK = 0;
     public static final int TRANSPARENT_FORGING_BLOCK_3 = 70;
-    public static final int TRANSPARENT_FORGING_BLOCK_5 = 0;
+    public static final int TRANSPARENT_FORGING_BLOCK_5 = 70;
     public static final int TRANSPARENT_FORGING_BLOCK_6 = isTestnet ? 70 : 70;
     public static final int TRANSPARENT_FORGING_BLOCK_7 = Integer.MAX_VALUE;
-    public static final int TRANSPARENT_FORGING_BLOCK_8 = isTestnet ? 0 : 0;
+    public static final int TRANSPARENT_FORGING_BLOCK_8 = isTestnet ? 70 : 70;
     public static final int NQT_BLOCK = isTestnet ? 0 : 0;
     public static final int FRACTIONAL_BLOCK = isTestnet ? NQT_BLOCK : 0;
     public static final int ASSET_EXCHANGE_BLOCK = isTestnet ? NQT_BLOCK : 0;
