@@ -138,7 +138,7 @@ public final class Constants {
     public static final int MAX_ANNOUNCE = 60;
 
     public static final int ALIAS_SYSTEM_BLOCK = 0;
-    public static final int TRANSPARENT_FORGING_BLOCK = 30;
+    public static final int TRANSPARENT_FORGING_BLOCK = 0;
     public static final int ARBITRARY_MESSAGES_BLOCK = 0;
     public static final int TRANSPARENT_FORGING_BLOCK_3 = 70;
     public static final int TRANSPARENT_FORGING_BLOCK_5 = 70;
