@@ -1,0 +1,149 @@
+2022-04-25 20:18:45 INFO: dwa.enableStackTraces = "true"
+2022-04-25 20:18:45 INFO: dwa.enableLogTraceback = "false"
+2022-04-25 20:18:45 INFO: logging enabled
+2022-04-25 20:18:45 INFO: socksProxyHost not defined
+2022-04-25 20:18:45 INFO: socksProxyPort not defined
+2022-04-25 20:18:45 INFO: dwa.isTestnet = "false"
+2022-04-25 20:18:45 INFO: dwa.isOffline = "false"
+2022-04-25 20:18:45 INFO: dwa.isLightClient = "false"
+2022-04-25 20:18:45 INFO: dwa.maxRollback = "30"
+2022-04-25 20:18:45 INFO: dwa.forgingDelay = "15"
+2022-04-25 20:18:45 INFO: dwa.forgingSpeedup = "3"
+2022-04-25 20:18:45 INFO: dwa.batchCommitSize = "1000"
+2022-04-25 20:18:45 INFO: dwa.maxPrunableLifetime = "7776000"
+2022-04-25 20:18:45 INFO: dwa.includeExpiredPrunable = "true"
+2022-04-25 20:18:45 INFO: dwa.correctInvalidFees = "false"
+2022-04-25 20:18:45 INFO: dwa.reconnectionDelay = "5000"
+2022-04-25 20:18:45 INFO: dwa.reconnectionDelayMax = "86400000"
+2022-04-25 20:18:45 INFO: dwa.blacklistingCounter not defined or not numeric, using default value 10
+2022-04-25 20:18:45 INFO: dwa.statementLogThreshold = "10000"
+2022-04-25 20:18:45 INFO: dwa.transactionLogThreshold = "15000"
+2022-04-25 20:18:45 INFO: dwa.transactionLogInterval = "15"
+2022-04-25 20:18:45 INFO: dwa.dbCacheKB = "262144"
+2022-04-25 20:18:45 INFO: dwa.dbUrl not defined
+2022-04-25 20:18:45 INFO: dwa.dbType = "h2"
+2022-04-25 20:18:45 INFO: dwa.dbDir = "./dwa_db/dwa"
+2022-04-25 20:18:45 INFO: dwa.dbParams = "DB_CLOSE_ON_EXIT=FALSE;MVCC=TRUE;MV_STORE=FALSE;CACHE_SIZE=262144"
+2022-04-25 20:18:45 INFO: dwa.dbUsername = "sa"
+2022-04-25 20:18:45 INFO: dwa.dbPassword = "{not logged}"
+2022-04-25 20:18:45 INFO: dwa.maxDbConnections = "30"
+2022-04-25 20:18:45 INFO: dwa.dbLoginTimeout = "70"
+2022-04-25 20:18:45 INFO: dwa.dbDefaultLockTimeout = "60"
+2022-04-25 20:18:45 INFO: dwa.dbMaxMemoryRows = "1000000"
+2022-04-25 20:18:46 INFO: dwa.useStrongSecureRandom = "false"
+2022-04-25 20:18:47 INFO: Database update may take a while if needed, current db version 494...
+2022-04-25 20:18:47 INFO: dwa.enableTransactionRebroadcasting = "true"
+2022-04-25 20:18:47 INFO: dwa.testUnconfirmedTransactions not defined, using default false
+2022-04-25 20:18:47 INFO: dwa.maxUnconfirmedTransactions = "50000"
+2022-04-25 20:18:47 INFO: dwa.trimDerivedTables = "true"
+2022-04-25 20:18:47 INFO: dwa.numberOfForkConfirmations = "2"
+2022-04-25 20:18:47 INFO: dwa.simulateEndlessDownload not defined, using default false
+2022-04-25 20:18:47 INFO: dwa.trimFrequency = "10"
+2022-04-25 20:18:47 INFO: dwa.disableGetMoreBlocksThread not defined, using default false
+2022-04-25 20:18:47 INFO: dwa.disableProcessTransactionsThread not defined, using default false
+2022-04-25 20:18:47 INFO: dwa.disableRebroadcastTransactionsThread not defined, using default false
+2022-04-25 20:18:47 INFO: dwa.disableRemoveUnconfirmedTransactionsThread not defined, using default false
+2022-04-25 20:18:47 INFO: dwa.disableProcessWaitingTransactionsThread not defined, using default false
+2022-04-25 20:18:48 INFO: dwa.enablePublicKeyCache = "true"
+2022-04-25 20:18:48 INFO: dwa.ledgerTrimKeep = "30000"
+2022-04-25 20:18:48 INFO: dwa.ledgerAccounts = "*"
+2022-04-25 20:18:48 INFO: Account ledger is tracking all accounts
+2022-04-25 20:18:48 INFO: dwa.ledgerLogUnconfirmed = "2"
+2022-04-25 20:18:48 INFO: dwa.processPolls = "true"
+2022-04-25 20:18:48 INFO: dwa.deleteFinishedShufflings = "false"
+2022-04-25 20:18:48 INFO: dwa.hideErrorDetails = "false"
+2022-04-25 20:18:48 INFO: dwa.myPlatform not defined
+2022-04-25 20:18:48 INFO: dwa.myAddress not defined
+2022-04-25 20:18:48 INFO: dwa.peerServerPort = "2874"
+2022-04-25 20:18:48 INFO: dwa.shareMyAddress = "true"
+2022-04-25 20:18:48 INFO: dwa.enablePeerUPnP = "true"
+2022-04-25 20:18:48 INFO: dwa.myHallmark not defined
+2022-04-25 20:18:48 INFO: dwa.adminPassword = "{not logged}"
+2022-04-25 20:18:48 INFO: dwa.maxAPIRecords = "100"
+2022-04-25 20:18:48 INFO: dwa.enableAPIUPnP = "false"
+2022-04-25 20:18:48 INFO: dwa.apiServerIdleTimeout = "30000"
+2022-04-25 20:18:48 INFO: dwa.apiServerCORS = "true"
+2022-04-25 20:18:48 INFO: dwa.forwardedForHeader not defined
+2022-04-25 20:18:48 INFO: dwa.disabledAPIs not defined
+2022-04-25 20:18:48 INFO: dwa.disabledAPITags = "Digital Goods Store;Monetary System;Shuffling;Tagged Data;Debug;Add-ons"
+2022-04-25 20:18:48 INFO: dwa.allowedBotHosts = "*; localhost; [0:0:0:0:0:0:0:1];"
+2022-04-25 20:18:48 INFO: dwa.enableAPIServer = "true"
+2022-04-25 20:18:48 INFO: dwa.apiServerPort = "2876"
+2022-04-25 20:18:48 INFO: dwa.apiServerSSLPort = "2876"
+2022-04-25 20:18:48 INFO: dwa.apiServerHost = "0.0.0.0"
+2022-04-25 20:18:48 INFO: dwa.disableAdminPassword = "false"
+2022-04-25 20:18:48 INFO: dwa.apiSSL = "false"
+2022-04-25 20:18:49 INFO: API server using HTTP port 2876
+2022-04-25 20:18:49 INFO: dwa.apiResourceBase = "./html/www"
+2022-04-25 20:18:49 INFO: dwa.apiWelcomeFile = "index.html"
+2022-04-25 20:18:49 INFO: dwa.javadocResourceBase = "./html/doc"
+2022-04-25 20:18:49 INFO: dwa.maxUploadFileSize not defined or not numeric, using default value 0
+2022-04-25 20:18:49 INFO: dwa.maxUploadFileSize not defined or not numeric, using default value 0
+2022-04-25 20:18:49 INFO: dwa.enableAPIServerGZIPFilter not defined, using default true
+2022-04-25 20:18:49 INFO: dwa.apiFrameOptionsSameOrigin = "true"
+2022-04-25 20:18:50 INFO: dwa.defaultPeers = "172.104.128.41;47.241.223.233;66.42.43.155;8.215.47.205;47.253.56.245;45.79.125.6;143.198.40.29;161.35.145.81;216.238.99.120;8.209.240.200;8.211.0.82;207.148.76.33;139.162.3.192;136.244.87.78;172.105.219.13;"
+2022-04-25 20:18:50 INFO: dwa.wellKnownPeers = "172.104.128.41;47.241.223.233;66.42.43.155;8.215.47.205;47.253.56.245;45.79.125.6;143.198.40.29;161.35.145.81;216.238.99.120;8.209.240.200;8.211.0.82;207.148.76.33;139.162.3.192;136.244.87.78;172.105.219.13;"
+2022-04-25 20:18:50 INFO: dwa.knownBlacklistedPeers not defined
+2022-04-25 20:18:50 INFO: dwa.maxNumberOfInboundConnections = "250"
+2022-04-25 20:18:50 INFO: dwa.maxNumberOfOutboundConnections = "50"
+2022-04-25 20:18:50 INFO: dwa.maxNumberOfConnectedPublicPeers = "20"
+2022-04-25 20:18:50 INFO: dwa.maxNumberOfKnownPeers = "2000"
+2022-04-25 20:18:50 INFO: dwa.minNumberOfKnownPeers = "1000"
+2022-04-25 20:18:50 INFO: dwa.connectTimeout = "10000"
+2022-04-25 20:18:50 INFO: dwa.readTimeout = "20000"
+2022-04-25 20:18:50 INFO: dwa.enableHallmarkProtection = "true"
+2022-04-25 20:18:50 INFO: dwa.pushThreshold = "0"
+2022-04-25 20:18:50 INFO: dwa.pullThreshold = "0"
+2022-04-25 20:18:50 INFO: dwa.useWebSockets = "true"
+2022-04-25 20:18:50 INFO: dwa.webSocketIdleTimeout = "900000"
+2022-04-25 20:18:50 INFO: dwa.enablePeerServerGZIPFilter = "true"
+2022-04-25 20:18:50 INFO: dwa.blacklistingPeriod = "60000"
+2022-04-25 20:18:50 INFO: dwa.communicationLoggingMask = "0"
+2022-04-25 20:18:50 INFO: dwa.sendToPeersLimit = "10"
+2022-04-25 20:18:50 INFO: dwa.usePeersDb = "true"
+2022-04-25 20:18:50 INFO: dwa.savePeers = "true"
+2022-04-25 20:18:50 INFO: dwa.getMorePeers = "true"
+2022-04-25 20:18:50 INFO: dwa.cjdnsOnly = "false"
+2022-04-25 20:18:50 INFO: dwa.ignorePeerAnnouncedAddress = "false"
+2022-04-25 20:18:50 INFO: dwa.disablePeerConnectingThread not defined, using default false
+2022-04-25 20:18:50 INFO: dwa.disablePeerUnBlacklistingThread not defined, using default false
+2022-04-25 20:18:50 INFO: dwa.disableGetMorePeersThread not defined, using default false
+2022-04-25 20:18:50 INFO: dwa.peerServerHost = "0.0.0.0"
+2022-04-25 20:18:50 INFO: dwa.peerServerIdleTimeout = "90000"
+2022-04-25 20:18:50 INFO: dwa.blacklistingThresholdCount not defined or not numeric, using default value 25
+2022-04-25 20:18:50 INFO: dwa.blacklistingThresholdErrorDuration not defined or not numeric, using default value 300000
+2022-04-25 20:18:50 INFO: dwa.enablePeerServerDoSFilter = "true"
+2022-04-25 20:18:50 INFO: dwa.peerServerDoSFilter.maxRequestsPerSec = "30"
+2022-04-25 20:18:50 INFO: dwa.peerServerDoSFilter.delayMs = "1000"
+2022-04-25 20:18:50 INFO: dwa.peerServerDoSFilter.maxRequestMs = "300000"
+2022-04-25 20:18:50 INFO: dwa.enableAPIProxy = "true"
+2022-04-25 20:18:50 INFO: dwa.apiProxyBlacklistingPeriod = "1800000"
+2022-04-25 20:18:50 INFO: dwa.forceAPIProxyServerURL not defined
+2022-04-25 20:18:50 INFO: dwa.maxNumberOfForgers = "100"
+2022-04-25 20:18:50 INFO: dwa.enableFakeForging not defined, using default false
+2022-04-25 20:18:50 INFO: dwa.disableGenerateBlocksThread not defined, using default false
+2022-04-25 20:18:50 INFO: dwa.addOns not defined
+2022-04-25 20:18:50 INFO: dwa.allowedUserHosts = "127.0.0.1; localhost; [0:0:0:0:0:0:0:1];"
+2022-04-25 20:18:50 INFO: dwa.enableUIServer = "false"
+2022-04-25 20:18:50 INFO: User interface server not enabled
+2022-04-25 20:18:50 INFO: dwa.debugTraceQuote = "^"
+2022-04-25 20:18:50 INFO: dwa.debugTraceSeparator = "	"
+2022-04-25 20:18:50 INFO: dwa.debugLogUnconfirmed = "false"
+2022-04-25 20:18:50 INFO: dwa.debugTraceAccounts not defined
+2022-04-25 20:18:50 INFO: dwa.debugTraceLog = "dwa-trace.csv"
+2022-04-25 20:18:50 INFO: Genesis block already in database
+2022-04-25 20:18:50 INFO: Last block height: 0
+2022-04-25 20:18:50 INFO: dwa.forceScan = "false"
+2022-04-25 20:18:50 INFO: dwa.apiServerEnforcePOST = "true"
+2022-04-25 20:18:50 INFO: Disabled APITags: [Add-ons, Debug, Digital Goods Store, Monetary System, Shuffling, Tagged Data]
+2022-04-25 20:18:51 INFO: Looking for UPnP gateway device...
+2022-04-25 20:18:51 INFO: dwa.upnpGatewayTimeout not defined or not numeric, using default value 7000
+2022-04-25 20:18:51 INFO: dwa.upnpDiscoverTimeout not defined or not numeric, using default value 3000
+2022-04-25 20:18:51 INFO: Started API server at 0.0.0.0:2876
+2022-04-25 20:18:55 INFO: Shutting down...
+2022-04-25 20:18:55 INFO: dwa.maxNumberOfMonitors = "100"
+2022-04-25 20:18:55 INFO: shutting down networkService
+2022-04-25 20:19:00 INFO: shutting down sendingService
+2022-04-25 20:19:00 INFO: shutting down peersService
+2022-04-25 20:19:00 INFO: Database shutdown completed
+2022-04-25 20:19:00 INFO: Dwa server 1.11.5 stopped.

@@ -18,7 +18,8 @@ package dwa;
 
 public final class Genesis {
 
-    public static final long GENESIS_BLOCK_ID = -145183321945369120L;
+    //public static final long GENESIS_BLOCK_ID = -145183321945369120L;
+    public static final long GENESIS_BLOCK_ID = 110050893444270410L;
     public static final long CREATOR_ID = 1739068987193023818L;
     public static final byte[] CREATOR_PUBLIC_KEY = {
             18, 89, -20, 33, -45, 26, 48, -119, -115, 124, -47, 96, -97, -128, -39, 102,
@@ -32,7 +33,8 @@ public final class Genesis {
             Long.parseUnsignedLong("10409186412129402684"),
             Long.parseUnsignedLong("10538500317402612238"),
             Long.parseUnsignedLong("13246487333523724154"),
-            Long.parseUnsignedLong("1307880421906709596")
+            Long.parseUnsignedLong("1091437256605681707")
+            //Long.parseUnsignedLong("1307880421906709596")
     };
 
 
