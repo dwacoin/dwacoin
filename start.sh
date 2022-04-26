@@ -17,19 +17,6 @@ else
     JAVA=java
 fi
 
-OS="`uname`"
-case $OS in
-  'Linux')
-    OS='Linux'
-    MEM=`awk '/MemTotal/ { printf "%.0fm", $2*6/10000 }' /proc/meminfo`
-    ;;
-  'Darwin') 
-    OS='Mac'
-    MEM=`system_profiler SPHardwareDataType | grep "Memory:" | awk '/Memory/ { printf "%.0fm", $2*1000000*6/10000 }'`
-    ;;
-  *) MEM='1000m';;
-esac
-
-nohup ${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -Xmx${MEM} -Xms${MEM} -cp classes:lib/*:conf:addons/classes:addons/lib/* -Ddwa.runtime.mode=server dwa.Dwa > /dev/null 2>&1 &
+nohup ${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -cp classes:lib/*:conf:addons/classes:addons/lib/* -Ddwa.runtime.mode=server dwa.Dwa > /dev/null 2>&1 &
 echo $! > ~/.dwa/dwa.pid
 cd - > /dev/null

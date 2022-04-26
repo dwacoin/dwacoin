@@ -9,5 +9,5 @@ echo "* under ~/.dwa/ , invoke this script as:                              *"
 echo "* ./compact.sh -Ddwa.runtime.mode=desktop                             *"
 echo "***********************************************************************"
 
-java -Xmx1024m -cp "classes:lib/*:conf" $@ dwa.tools.CompactDatabase
+java -Xmx2048m -cp "classes:lib/*:conf" $@ dwa.tools.CompactDatabase
 exit $?
