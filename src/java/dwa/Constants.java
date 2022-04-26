@@ -36,7 +36,7 @@ public final class Constants {
     public static final long INITIAL_BASE_TARGET = 241511816 / ( MAX_BALANCE_DWA / 1000000000L);//315966052
     public static final long MAX_BASE_TARGET = MAX_BALANCE_DWA * INITIAL_BASE_TARGET;
     public static final long MAX_BASE_TARGET_2 = isTestnet ? MAX_BASE_TARGET : INITIAL_BASE_TARGET * 30;
-    public static final long BASE_FORK = 15;
+    public static final long BASE_FORK = 30;
     public static final long MIN_BASE_TARGET = INITIAL_BASE_TARGET * 9 / 10;
     public static final int MIN_BLOCKTIME_LIMIT = 53;
     public static final int MAX_BLOCKTIME_LIMIT = 67;
