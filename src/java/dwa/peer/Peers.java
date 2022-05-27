@@ -95,9 +95,9 @@ public final class Peers {
     static final int readTimeout;
     static final int blacklistingPeriod;
     static final boolean getMorePeers;
-    static final int MAX_REQUEST_SIZE = 1024 * 1024;
-    static final int MAX_RESPONSE_SIZE = 2 * 1024 * 1024;
-    static final int MAX_MESSAGE_SIZE = 20 * 1024 * 1024;
+    static final int MAX_REQUEST_SIZE = 8 * 1024 * 1024;
+    static final int MAX_RESPONSE_SIZE = 20 * 1024 * 1024;
+    static final int MAX_MESSAGE_SIZE = 10 * 1024 * 1024;
     public static final int MIN_COMPRESS_SIZE = 256;
     static final boolean useWebSockets;
     static final int webSocketIdleTimeout;
@@ -626,7 +626,7 @@ public final class Peers {
                     if (peer == null) {
                         return;
                     }
-                    JSONObject response = peer.send(getPeersRequest, 10 * 1024 * 1024);
+                    JSONObject response = peer.send(getPeersRequest, 20 * 1024 * 1024);
                     if (response == null) {
                         return;
                     }

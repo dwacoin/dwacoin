@@ -17,6 +17,6 @@ else
     JAVA=java
 fi
 
-nohup ${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -cp classes:lib/*:conf:addons/classes:addons/lib/* -Ddwa.runtime.mode=server dwa.Dwa > /dev/null 2>&1 &
+nohup ${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -Xmx4G -cp classes:lib/*:conf:addons/classes:addons/lib/* -Ddwa.runtime.mode=server dwa.Dwa > /dev/null 2>&1 &
 echo $! > ~/.dwa/dwa.pid
 cd - > /dev/null

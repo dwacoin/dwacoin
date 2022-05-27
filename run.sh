@@ -5,4 +5,4 @@ else
     JAVA=java
 fi
 
-${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -cp classes:lib/*:conf:addons/classes:addons/lib/* dwa.Dwa
+${JAVA} -XX:MaxGCPauseMillis=50 -XX:NewRatio=2 -Xmx4G -cp classes:lib/*:conf:addons/classes:addons/lib/* dwa.Dwa
