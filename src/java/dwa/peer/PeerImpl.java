@@ -679,15 +679,15 @@ final class PeerImpl implements Peer {
     }
 
     boolean isWorthyReconnect(String host, PeerWebSocket peerWebSocket,String source,Exception e){
-        Logger.logInfoMessage("..["+host+"]isWorthyReconnect:initialized, source: "+source+", exception: "+e.toString());
+        //Logger.logInfoMessage("..["+host+"]isWorthyReconnect:initialized, source: "+source+", exception: "+e.toString());
         if(peerWebSocket == null)return false;
         DWAReconnectionParameter dwaReconnectionParameter = getDWAReconnectionParameter(host);
         if(dwaReconnectionParameter.count>=Constants.blacklistingCounter){
             //STOP, no need to reconnect. Leave as it is
-            Logger.logInfoMessage("..["+host+"]isWorthyReconnect:no need to reconnect. Leave as it is");
+            //Logger.logInfoMessage("..["+host+"]isWorthyReconnect:no need to reconnect. Leave as it is");
             return false;
         }else{
-            Logger.logInfoMessage("..["+host+"]isWorthyReconnect:worthy");
+            //Logger.logInfoMessage("..["+host+"]isWorthyReconnect:worthy");
             increaseCounterDWAReconnectionParameter(host);
             long dwaTimer = timerDWAReconnectionParameter(host);
             return true;
