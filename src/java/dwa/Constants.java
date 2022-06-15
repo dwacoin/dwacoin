@@ -27,7 +27,7 @@ public final class Constants {
     public static final boolean isOffline = Dwa.getBooleanProperty("dwa.isOffline");
     public static final boolean isLightClient = Dwa.getBooleanProperty("dwa.isLightClient");
 
-    public static final int MAX_NUMBER_OF_TRANSACTIONS = 1000;
+    public static final int MAX_NUMBER_OF_TRANSACTIONS = 511;
     public static final int MIN_TRANSACTION_SIZE = 176;
     public static final int MAX_PAYLOAD_LENGTH = MAX_NUMBER_OF_TRANSACTIONS * MIN_TRANSACTION_SIZE;
     public static final long MAX_BALANCE_DWA =  10000000000000L; // 10T

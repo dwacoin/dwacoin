@@ -742,7 +742,7 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
             request.put("blockIds", idList);
             request.put("blockId", Long.toUnsignedString(blockIds.get(start)));
             long startTime = System.currentTimeMillis();
-            JSONObject response = peer.send(JSON.prepareRequest(request), 20 * 1024 * 1024);
+            JSONObject response = peer.send(JSON.prepareRequest(request), 10 * 1024 * 1024);
             responseTime = System.currentTimeMillis() - startTime;
             if (response == null) {
                 return null;
@@ -960,7 +960,7 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
                     }
                     request.put("requestType", "getTransactions");
                     request.put("transactionIds", requestList);
-                    JSONObject response = peer.send(JSON.prepareRequest(request), 20 * 1024 * 1024);
+                    JSONObject response = peer.send(JSON.prepareRequest(request), 10 * 1024 * 1024);
                     if (response == null) {
                         return;
                     }
